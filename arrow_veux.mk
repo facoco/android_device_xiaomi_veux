@@ -14,18 +14,21 @@ TARGET_BOOT_ANIMATION_RES := 1080
 TARGET_SUPPORTS_GOOGLE_RECORDER := true
 TARGET_INCLUDE_LIVE_WALLPAPERS := false
 TARGET_SUPPORTS_QUICK_TAP := true
-IS_OFFICIAL := true
+ARROW_GAPPS := true
 
 # Inherit from veux device
 $(call inherit-product, device/xiaomi/veux/device.mk)
 
-# Inherit some common PixelOS
-$(call inherit-product, vendor/aosp/config/common_full_phone.mk)
+# Inherit some common ArrowOS stuff.
+$(call inherit-product, vendor/arrow/config/common.mk)
 
-PRODUCT_NAME := aosp_veux
+PRODUCT_NAME := arrow_veux
 PRODUCT_DEVICE := veux
 PRODUCT_MANUFACTURER := Xiaomi
 PRODUCT_BRAND := POCO
 PRODUCT_MODEL := POCO X4 Pro 5G
 
 PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
+
+# ArrowOS additions
+DEVICE_MAINTAINER := facoco
