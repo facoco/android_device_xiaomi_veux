@@ -580,3 +580,7 @@ PRODUCT_COPY_FILES += \
 
 # Get non-open-source specific aspects
 $(call inherit-product, vendor/xiaomi/veux/veux-vendor.mk)
+
+# Remove some prebuilt apps
+PRODUCT_PACKAGES += \
+    RemovePackages
